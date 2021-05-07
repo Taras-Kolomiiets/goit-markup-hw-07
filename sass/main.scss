@@ -1,3 +1,9 @@
-body {
-  color: aqua;
-}
+@import './utils/variables';
+@import './base/common';
+@import './utils/placeholders';
+
+@import './components/page-header';
+@import './components/logo';
+@import './components/main-nav';
+@import './components/contacts-nav';
+@import './components/hero';
