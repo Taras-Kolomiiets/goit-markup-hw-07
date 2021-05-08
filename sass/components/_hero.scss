@@ -1,49 +1,27 @@
 .hero {
   max-width: 1600px;
   min-height: 600px;
+
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
-  background-color: var(--bg-color);
-  background-image: linear-gradient(
-      to right,
-      var(--overlay-color),
-      var(--overlay-color)
-    ),
-    url('../images/banner-photo.jpg');
-}
-.hero-title {
-  margin-top: 0;
-  margin-bottom: 30px;
-  color: var(--primary-white-color);
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-.main-button {
-  display: inline-block;
-  font-family: Roboto, sans-serif;
-  color: var(--primary-white-color);
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
-  cursor: pointer;
-  min-width: 200px;
-  min-height: 50px;
-  border: none;
-  border-radius: 4px;
-  padding: 10px 32px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.main-button:hover {
-  background-color: var(--active-buttons-color);
+  background-color: $bg-color;
+  background-image: linear-gradient(to right, $overlay-color, $overlay-color),
+    url('../images/banner-photo.jpg');
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    color: $primary-white-color;
+
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
 }
