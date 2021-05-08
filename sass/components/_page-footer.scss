@@ -8,8 +8,9 @@
     align-items: baseline;
   }
 
-  &__thumb:not(:last-child) {
-    margin-right: 70px;
+  &__thumb {
+    width: 270px;
+    margin-right: 30px;
   }
 
   &__logo {
@@ -49,10 +50,6 @@
     color: $accent-color;
   }
 
-  &__thumb-social {
-    margin-left: 30px;
-  }
-
   &__subtitle {
     display: inline-block;
 
@@ -69,6 +66,5 @@
 
   &__form-container {
     flex-grow: 2;
-    margin-left: auto;
   }
 }

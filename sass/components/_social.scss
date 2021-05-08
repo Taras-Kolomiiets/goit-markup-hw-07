@@ -6,6 +6,10 @@
   padding: 0;
   padding-bottom: 30px;
 
+  &--left {
+    justify-content: flex-start;
+  }
+
   &__list-item:not(:first-child) {
     margin-left: 10px;
   }

@@ -188,6 +188,7 @@
                 alt="Фото Игоря Демьяненко"
                 width="270"
               />
+
               <h3 class="team__member">Игорь Демьяненко</h3>
               <p class="team__position">Product Designer</p>
               <ul class="social">
@@ -417,9 +418,9 @@
             >
           </address>
         </div>
-        <div class="page-footer__thumb-social">
+        <div class="page-footer__thumb">
           <b class="page-footer__subtitle">Присоединяйтесь</b>
-          <ul class="social">
+          <ul class="social social--left">
             <li class="social__list-item">
               <a
                 href="https://www.instagram.com/"
@@ -487,98 +488,85 @@
     <!--Модальне вікно-->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <form class="js-speaker-form">
-          <div
-            class="form-group"
-            role="group"
-            aria-labelby="contact-details-head"
-          >
-            <p class="form-title" id="contact-details-head">
-              Оставьте свои данные, мы вам перезвоним
-            </p>
-            <div class="form-item">
-              <label for="user-name" class="form-label">Имя </label>
+        <button class="modal__button-close" data-modal-close>
+          <svg class="modal__icon-close" width="18px" height="18px">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <div
+          class="modal__wrap"
+          role="group"
+          aria-labelby="contact-details-head"
+        >
+          <p class="modal__title" id="contact-details-head">
+            Оставьте свои данные, мы вам перезвоним
+          </p>
+          <form name="contact-form" class="form">
+            <div class="form__item">
+              <label for="user-name" class="form__label">Имя </label>
               <input
                 type="text"
                 name="name"
-                class="form-input"
+                class="form__input"
                 id="user-name"
               />
-              <svg class="icon-form" width="18px" height="18px">
+              <svg class="form__icon" width="18px" height="18px">
                 <use href="./images/icons.svg#icon-person"></use>
               </svg>
             </div>
-            <div class="form-item">
-              <label for="user-tel" class="form-label">Телефон</label>
-              <input type="tel" name="tel" class="form-input" id="user-tel" />
-              <svg class="icon-form" width="18px" height="18px">
+            <div class="form__item">
+              <label for="user-tel" class="form__label">Телефон</label>
+              <input type="tel" name="tel" class="form__input" id="user-tel" />
+              <svg class="form__icon" width="18px" height="18px">
                 <use href="./images/icons.svg#icon-phone"></use>
               </svg>
             </div>
-            <div class="form-item">
-              <label for="user-email" class="form-label">Почта</label>
+            <div class="form__item">
+              <label for="user-email" class="form__label">Почта</label>
               <input
                 type="email"
                 name="email"
-                class="form-input"
+                class="form__input"
                 id="user-email"
               />
-              <svg class="icon-form" width="18px" height="18px">
+              <svg class="form__icon" width="18px" height="18px">
                 <use href="./images/icons.svg#icon-email"></use>
               </svg>
             </div>
-            <div class="form-item">
-              <label for="user-comment" class="form-label">Комментарий</label>
+            <div class="form__item">
+              <label for="user-comment" class="form__label">Комментарий</label>
               <textarea
                 name="comment"
                 placeholder="Введите текст"
-                class="form-input-comment"
+                class="form__input-comment"
                 id="user-comment"
               ></textarea>
             </div>
 
-            <label class="field">
+            <label class="form__field">
               <input
-                class="checkbox"
+                class="form__checkbox"
                 type="checkbox"
                 name="agreement"
                 required
               />
-              <span class="check"></span>
-              <svg class="icon-check" width="16" height="15">
+              <span class="form__check"></span>
+              <svg class="form__icon-check" width="16" height="15">
                 <use href="./images/icons.svg#icon-check"></use>
               </svg>
-              <p class="field-label">
+              <p class="form__field-label">
                 Соглашаюсь с рассылкой и принимаю
-                <a class="license-contract" href="">Условия договора</a>
+                <a class="form__license-contract" href="">Условия договора</a>
               </p>
             </label>
 
-            <div class="button-thumb">
-              <button type="submit" class="submit-button">Отправить</button>
+            <div class="form__button-thumb">
+              <button type="submit" class="button">Отправить</button>
             </div>
-          </div>
-        </form>
-        <button class="button-close" data-modal-close>
-          <svg class="icon-close" width="18px" height="18px">
-            <use href="./images/icons.svg#icon-close"></use>
-          </svg>
-        </button>
+          </form>
+        </div>
       </div>
     </div>
     <script src="./js/modal.js"></script>
-    <script>
-      (() => {
-        document
-          .querySelector('.js-speaker-form')
-          .addEventListener('submit', e => {
-            e.preventDefault();
-
-            new FormData(e.currentTarget).forEach((value, name) =>
-              console.log(`${name}: ${value}`),
-            );
-          });
-      })();
-    </script>
   </body>
 </html>
