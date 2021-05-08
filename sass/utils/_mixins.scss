@@ -2,3 +2,15 @@
   color: $color;
   background-color: $bg-color;
 }
+
+@mixin cards-set($gap: $card-set-gap) {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -1 * $gap;
+  margin-right: -1 * $gap;
+}
+
+@mixin card($gap: $card-set-gap) {
+  margin-right: $gap;
+  margin-bottom: $gap;
+}
